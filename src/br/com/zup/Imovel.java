@@ -50,4 +50,17 @@ public class Imovel {
     public void setFuncionarioImobiliaria(List<FuncionarioResponsavel> funcionarioImobiliaria) {
         this.funcionarioImobiliaria = funcionarioImobiliaria;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+
+        retorno.append("\n Endereço do Imovel: "+ enderecoImovel);
+        retorno.append("\n Valor do aluguel: "+valorAluguel);
+        retorno.append(("\n Quantidade de Moradores: "+moradoresDoImovel.size()));
+        retorno.append("\n Morador: "+moradoresDoImovel);
+        retorno.append("\n Funcionario responsavel: "+ funcionarioImobiliaria);
+        return retorno.toString();
+
+    }
 }
