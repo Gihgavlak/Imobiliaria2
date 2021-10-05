@@ -5,6 +5,10 @@ public abstract class Pessoa {
     private String cpf;
     private String telefone;
 
+    public Pessoa(){
+
+    }
+
     public Pessoa(String nome, String cpf, String telefone) {
         this.nome = nome;
         cpf = cpf;
