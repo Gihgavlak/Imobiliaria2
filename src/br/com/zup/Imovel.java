@@ -55,6 +55,7 @@ public class Imovel {
         this.funcionarioImobiliaria = funcionarioImobiliaria;
     }
 
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();

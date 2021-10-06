@@ -21,6 +21,15 @@ public class Imobiliaria {
         this.imoveis = imoveis;
     }
 
+    public void adicionarImovel (Imovel adicionarImovel){
+        imoveis.add(adicionarImovel);
+    }
+    public void mostrarTodosOsImoveis(){
+        for (Imovel referencia : imoveis){
+            System.out.println(referencia.toString());
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
