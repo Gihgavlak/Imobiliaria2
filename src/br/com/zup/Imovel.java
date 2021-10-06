@@ -7,16 +7,20 @@ public class Imovel {
     private String enderecoImovel;
     private double valorAluguel;
     private List<Moradores> moradoresDoImovel = new ArrayList<>();
-    private List<FuncionarioResponsavel> funcionarioImobiliaria= new ArrayList();
+    private FuncionarioResponsavel funcionarioImobiliaria;
 
     public Imovel() {
     }
 
-    public Imovel(String enderecoImovel, double valorAluguel, List<Moradores> moradoresDoImovel, List<FuncionarioResponsavel> funcionarioImobiliaria) {
+    public Imovel(String enderecoImovel, double valorAluguel, List<Moradores> moradoresDoImovel, FuncionarioResponsavel funcionarioImobiliaria) {
         this.enderecoImovel = enderecoImovel;
         this.valorAluguel = valorAluguel;
         this.moradoresDoImovel = moradoresDoImovel;
         this.funcionarioImobiliaria = funcionarioImobiliaria;
+    }
+
+    public Imovel(String endereco, double valorAluguel, Imovel cadastrarImovel, FuncionarioResponsavel funcionarioImobiliaria) {
+
     }
 
     public String getEnderecoImovel() {
@@ -43,11 +47,11 @@ public class Imovel {
         this.moradoresDoImovel = moradoresDoImovel;
     }
 
-    public List<FuncionarioResponsavel> getFuncionarioImobiliaria() {
+    public FuncionarioResponsavel getFuncionarioImobiliaria() {
         return funcionarioImobiliaria;
     }
 
-    public void setFuncionarioImobiliaria(List<FuncionarioResponsavel> funcionarioImobiliaria) {
+    public void setFuncionarioImobiliaria(FuncionarioResponsavel funcionarioImobiliaria) {
         this.funcionarioImobiliaria = funcionarioImobiliaria;
     }
 
@@ -55,11 +59,11 @@ public class Imovel {
     public String toString() {
         StringBuilder retorno = new StringBuilder();
 
-        retorno.append("\n Endereço do Imovel: "+ enderecoImovel);
-        retorno.append("\n Valor do aluguel: "+valorAluguel);
-        retorno.append(("\n Quantidade de Moradores: "+moradoresDoImovel.size()));
-        retorno.append("\n Morador: "+moradoresDoImovel);
-        retorno.append("\n Funcionario responsavel: "+ funcionarioImobiliaria);
+        retorno.append("\n Endereço do Imovel: " + enderecoImovel);
+        retorno.append("\n Valor do aluguel: " + valorAluguel);
+        retorno.append(("\n Quantidade de Moradores: " + moradoresDoImovel.size()));
+        retorno.append("\n Morador: " + moradoresDoImovel);
+        retorno.append("\n Funcionario responsavel: " + funcionarioImobiliaria);
         return retorno.toString();
 
     }

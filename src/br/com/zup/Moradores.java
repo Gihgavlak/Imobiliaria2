@@ -3,7 +3,7 @@ package br.com.zup;
 public class Moradores extends Pessoa {
     private double renda;
 
-    public Moradores(){
+    public Moradores(String nomeMorador, String cpf, double renda){
 
     }
 
